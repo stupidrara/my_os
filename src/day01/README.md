@@ -1,12 +1,15 @@
 # day 1
 
+## 進度
+os的hello world
+
 ## How to compile nas file
 ```bash
-../../z_tools/nask.exe helloos.nas helloos_nas.img
+../z_tools/nask.exe helloos.nas helloos.img
 ```
 
 ## How to run helloos.img
-- You need to install qemu
 ```bash
-qemu-system-x86_64 -drive format=raw,file=helloos.img
+cp helloos.img ..\z_tools\qemu\fdimage0.bin
+../z_tools/make.exe -r -C ../z_tools/qemu
 ```
