@@ -10,6 +10,6 @@ os的hello world
 
 ## How to run helloos.img
 ```bash
-cp helloos.img ..\z_tools\qemu\fdimage0.bin
+cp helloos.img ../z_tools/qemu/fdimage0.bin
 ../z_tools/make.exe -r -C ../z_tools/qemu
 ```
