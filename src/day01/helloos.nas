@@ -7,6 +7,7 @@
 ; RESB: Reserve byte
 
 ; 以下是標準FAT12格式的軟式磁片的描述資訊
+    ORG     0x7c00              ; 將IPL讀入0x7c00(硬性規定)
 
     DB      0xeb, 0x4e, 0x90
     DB      "HELLOIPL"          ; 開機磁區的名稱
@@ -43,7 +44,7 @@
     DB      0x0a                ; 換行
     DB      0
 
-    RESB    0x1fe-$             ; 填入0x00直到0x001fe為止的命令
+    RESB    0x1fe-($-$$)             ; 填入0x00直到0x001fe為止的命令
 
     DB      0x55, 0xaa          ; 需讀到 55 AA 才可開機
 ; 以上為開機磁區(512B)
