@@ -17,7 +17,7 @@
     2. 透過 device id 來輸出或寫入資料
     3. io 完成後將 interrupt flag 還原
 
-執行 haribote.img 可看見畫面由幾個方形組成類似GUI的模樣。
+執行 haribote.img 可看見畫面由幾個方形組成類似GUI的模樣(只是做個樣子，還沒有功能)。
 
 ![截圖](image.png)
 
